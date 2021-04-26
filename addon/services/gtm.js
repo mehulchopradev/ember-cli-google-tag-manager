@@ -48,7 +48,7 @@ export default Service.extend({
 
   trackPageView: function (path, appId) {
     // window.dataLayer.push(this.createPayload('PageView', { pagePath: path }));
-    gtag('js', new Date());
-    gtag('config', appId);
+    this.gtag('js', new Date());
+    this.gtag('config', appId);
   }
 });
