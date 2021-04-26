@@ -13,7 +13,7 @@ export default Service.extend({
       eventLabel: '',
       eventValue: ''
     };
-    this.defaultPageView = this.defaultPageView || { event: 'vpv', virtualPagePath: '' };
+    this.defaultPageView = this.defaultPageView || { event: 'page_view', pagePath: '' };
     this.commonFields = this.commonFields || {};
   },
 
@@ -43,6 +43,6 @@ export default Service.extend({
   },
 
   trackPageView: function (path) {
-    window.dataLayer.push(this.createPayload('page_view', { virtualPagePath: path }));
+    window.dataLayer.push(this.createPayload('PageView', { pagePath: path }));
   }
 });
