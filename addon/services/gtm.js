@@ -43,6 +43,6 @@ export default Service.extend({
   },
 
   trackPageView: function (path) {
-    window.dataLayer.push(this.createPayload('PageView', { virtualPagePath: path }));
+    window.dataLayer.push(this.createPayload('page_view', { virtualPagePath: path }));
   }
 });
