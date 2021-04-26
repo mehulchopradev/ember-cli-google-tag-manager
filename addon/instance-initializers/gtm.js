@@ -11,7 +11,7 @@ export function initialize(application) {
   var gtm = application.lookup('service:gtm');
 
   router.on('routeDidChange', function() {
-    gtm.trackPageView(this.currentURL);
+    gtm.trackPageView(this.currentURL, appId);
   });
 }
 

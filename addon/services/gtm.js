@@ -42,7 +42,13 @@ export default Service.extend({
     window.dataLayer.push(this.createPayload('Event', o));
   },
 
-  trackPageView: function (path) {
-    window.dataLayer.push(this.createPayload('PageView', { pagePath: path }));
+  gtag: function () {
+    window.dataLayer.push(arguments);
+  },
+
+  trackPageView: function (path, appId) {
+    // window.dataLayer.push(this.createPayload('PageView', { pagePath: path }));
+    gtag('js', new Date());
+    gtag('config', appId);
   }
 });
